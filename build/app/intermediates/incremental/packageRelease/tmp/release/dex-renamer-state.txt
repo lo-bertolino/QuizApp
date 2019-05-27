@@ -1,4 +1,0 @@
-#Fri May 24 10:19:46 CEST 2019
-base.0=C\:\\Users\\annat\\sorpresa\\sorpresa_zoa\\build\\app\\intermediates\\transforms\\dexMerger\\release\\0
-path.0=classes.dex
-renamed.0=classes.dex
