@@ -21,10 +21,10 @@ class QuizScaffold extends StatelessWidget {
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomCenter,
-              stops: [0.2, 1],
+              stops: [0, 1],
               colors: [
-                Color(0xFF00a09a),
-                Color(0xFFffffff),
+                Color(0xFF007470),
+                Color(0xFF87DAD7),
               ],
             ),
           ),

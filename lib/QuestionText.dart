@@ -23,7 +23,7 @@ class QuestionText extends StatelessWidget {
           ),
         ),
       ),
-      height: MediaQuery.of(context).size.height / 2.7,
+      height: MediaQuery.of(context).size.height / 3.5,
       padding: EdgeInsets.symmetric(horizontal: 4),
     );
   }

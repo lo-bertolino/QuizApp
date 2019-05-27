@@ -26,35 +26,50 @@ class QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     return QuizScaffold(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Stack(
+        fit: StackFit.loose,
         children: <Widget>[
-          CompletionDots(counter: counter),
-          QuestionText(question: question),
-          Wrap(
-            children: [
-              CustomCard(
-                key: buttonKeys[0],
-                answer: question.answers[0],
-                checkCorrect: _checkCorrect,
+          Positioned(
+            top: 16,
+            left: 8,
+            right: 8,
+            child: Column(
+              children: <Widget>[
+                CompletionDots(counter: counter),
+                QuestionText(question: question),
+              ],
+            ),
+          ),
+          Positioned(
+            bottom: 8,
+            left: 0,
+            right: 0,
+            child: Center(
+              child: Wrap(
+                children: [
+                  CustomCard(
+                    key: buttonKeys[0],
+                    answer: question.answers[0],
+                    checkCorrect: _checkCorrect,
+                  ),
+                  CustomCard(
+                    key: buttonKeys[1],
+                    answer: question.answers[1],
+                    checkCorrect: _checkCorrect,
+                  ),
+                  CustomCard(
+                    key: buttonKeys[2],
+                    answer: question.answers[2],
+                    checkCorrect: _checkCorrect,
+                  ),
+                  CustomCard(
+                    key: buttonKeys[3],
+                    answer: question.answers[3],
+                    checkCorrect: _checkCorrect,
+                  ),
+                ],
               ),
-              CustomCard(
-                key: buttonKeys[1],
-                answer: question.answers[1],
-                checkCorrect: _checkCorrect,
-              ),
-              CustomCard(
-                key: buttonKeys[2],
-                answer: question.answers[2],
-                checkCorrect: _checkCorrect,
-              ),
-              CustomCard(
-                key: buttonKeys[3],
-                answer: question.answers[3],
-                checkCorrect: _checkCorrect,
-              ),
-            ],
+            ),
           ),
         ],
       ),
