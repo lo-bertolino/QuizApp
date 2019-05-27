@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-/// Mostra un [AlertDialog] che chiede se si vuole davvero chiudere la pagina che contiene un Form.
+/// Mostra un [AlertDialog] che chiede se si vuole davvero chiudere
+/// la pagina che contiene un Form.
 Future<bool> goingBackAlert({BuildContext context, MaterialPageRoute route}) async {
   return showDialog<bool>(
     context: context,
