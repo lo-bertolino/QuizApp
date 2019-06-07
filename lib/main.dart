@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'quiz.dart';
+import 'quiz_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,30 +10,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Il quiz di JEToP🎉🎉',
       theme: ThemeData(
-        accentColor: Color(0xFF00a09a),
+        accentColor: Color(0xFF00A09A),
         primarySwatch: Colors.teal,
       ),
-      home: MyHomePage(title: 'Il quiz di JEToP🎉🎉'),
+      home: MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  final String title;
-
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         bottomOpacity: 0.5,
-        title: Text(widget.title),
+        title: Text('Il quiz di JEToP🎉🎉'),
       ),
       body: Container(
         child: Center(
@@ -54,6 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: RaisedButton(
+                  // TODO Far iniziare il gioco
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
@@ -68,7 +60,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                   ),
-                  onPressed: () => startGame(context),
                 ),
               )
             ],
@@ -78,11 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void startGame(BuildContext context) {
+  void _startGame(BuildContext context) {
     print('Starting game');
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => Quiz(),
+        builder: (context) => QuizPage(),
       ),
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Questions.dart';
+import '../questions.dart';
 
 class CustomCard extends StatefulWidget {
   final Answer answer;
@@ -57,15 +57,22 @@ class CustomCardState extends State<CustomCard> {
 
   void _onPressed() {
     if (widget.checkCorrect(widget.answer)) {
+      // corretta => verde
       setState(() {
         _cardColor = Colors.green[200];
         _textColor = Colors.green[900];
       });
     } else {
+      // sbagliata => rosso
       setState(() {
         _cardColor = Colors.red[200];
         _textColor = Colors.red[900];
       });
     }
+    // ritorna con i colori iniziali
+    Future.delayed(
+      Duration(milliseconds: 500),
+      () => setState(() => reset()),
+    );
   }
 }

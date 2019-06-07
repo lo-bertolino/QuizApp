@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Questions.dart';
-
 class QuestionText extends StatelessWidget {
-  final Question question;
+  final String question;
 
   const QuestionText({
     Key key,
@@ -15,7 +13,7 @@ class QuestionText extends StatelessWidget {
     return Container(
       child: Center(
         child: Text(
-          question.string,
+          question,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 30,
