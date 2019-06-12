@@ -17,57 +17,48 @@ class Question {
 
 List<Question> db = [
   Question(
-    'In che anno è stata fondata JEToP?',
+    'Dove nacque Galileo Galilei?',
     [
-      Answer('1995', true),
-      Answer('1992', false),
-      Answer('2001', false),
-      Answer('1988', false),
+      Answer('Pisa', true),
+      Answer('Torino', false),
+      Answer('Milano', false),
+      Answer('Roma', false),
     ],
   ),
   Question(
-    'Qual è il nome del vicepresidente di Jade Italia?',
+    'In che anno è stato lanciato il telescopio Hubble?',
     [
-      Answer('Sofia Frau', true),
-      Answer('Marco Barisione', false),
-      Answer('Jessica Rota', false),
-      Answer('Isabella Florio', false),
+      Answer('1990', true),
+      Answer('1999', false),
+      Answer('2004', false),
+      Answer('1987', false),
     ],
   ),
   Question(
-    'Quanti JEurs ci sono in Europa?',
+    'Dov\'è Stonehenge?',
     [
-      Answer('28k', true),
-      Answer('50k', false),
-      Answer('20k', false),
-      Answer('12k', false),
+      Answer('Inghilterra', true),
+      Answer('Irlanda', false),
+      Answer('Francia', false),
+      Answer('Svezia', false),
     ],
   ),
   Question(
-    'Qual è il compleanno di JEToP?',
+    'In che stato si trova la Valle dei Re?',
     [
-      Answer('27 Novembre', true),
-      Answer('12 Febbraio', false),
-      Answer('3 Ottobre', false),
-      Answer('2 Dicembre', false),
+      Answer('Egitto', true),
+      Answer('Tunisia', false),
+      Answer('Florida', false),
+      Answer('Spagna', false),
     ],
   ),
   Question(
-    'Ma quanto è bello',
+    'Il dipinto "l\'Ultima Cena" è di..',
     [
-      Answer('Enrico Pavanello', true),
-      Answer('Enrico Pavanello', true),
-      Answer('Enrico Pavanello', true),
-      Answer('Enrico Pavanello', true),
-    ],
-  ),
-  Question(
-    'Quante JE ci sono in Italia?',
-    [
-      Answer('20', true),
-      Answer('18', false),
-      Answer('12', false),
-      Answer('25', false),
+      Answer('Da Vinci', true),
+      Answer('Il Caravaggio', false),
+      Answer('Raffaello', false),
+      Answer('Botticelli', false),
     ],
   ),
 ];

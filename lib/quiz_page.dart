@@ -18,6 +18,7 @@ class QuizPageState extends State<QuizPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        padding: const EdgeInsets.all(4),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
@@ -32,7 +33,7 @@ class QuizPageState extends State<QuizPage> {
         // TODO Inserire testo della domanda
         // TODO Inserire barra di completamento
         // TODO Inserire bottoni delle risposte
-        child: Container(),
+        child: Placeholder(),
       ),
     );
   }
