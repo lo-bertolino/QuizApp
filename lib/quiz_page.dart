@@ -18,6 +18,7 @@ class QuizPageState extends State<QuizPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        padding: const EdgeInsets.all(4),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
@@ -32,7 +33,7 @@ class QuizPageState extends State<QuizPage> {
         // TODO Inserire testo della domanda
         // TODO Inserire barra di completamento
         // TODO Inserire bottoni delle risposte
-        child: Container(),
+        child: Placeholder(),
       ),
     );
   }
@@ -41,7 +42,7 @@ class QuizPageState extends State<QuizPage> {
   void initState() {
     super.initState();
     print('There are ' +
-        db.length.toString() +
+        questionList.length.toString() +
         ' questions in total');
     _newQuestion();
   }
@@ -80,6 +81,6 @@ class QuizPageState extends State<QuizPage> {
         score.toString() +
         ', Target: ' +
         target.toString());
-    question = db[counter];
+    question = questionList[counter];
   }
 }
