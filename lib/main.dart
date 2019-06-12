@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Il quiz di JEToP🎉🎉',
+      title: 'Il quiz di JEToP',
       theme: ThemeData(
         accentColor: Color(0xFF00A09A),
         primarySwatch: Colors.teal,
@@ -42,25 +42,25 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
+              RaisedButton(
                 padding: const EdgeInsets.all(12.0),
-                child: RaisedButton(
-                  // TODO Far iniziare il gioco
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  color: Theme.of(context).accentColor,
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Text(
-                      "GIOCA",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 40,
-                      ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                color: Theme.of(context).accentColor,
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Text(
+                    "GIOCA",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 40,
                     ),
                   ),
                 ),
+                onPressed: () {
+                  _startGame(context);
+                },
               ),
             ],
           ),

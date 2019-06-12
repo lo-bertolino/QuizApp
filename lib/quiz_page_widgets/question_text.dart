@@ -5,8 +5,9 @@ class QuestionText extends StatelessWidget {
 
   const QuestionText({
     Key key,
-    this.question,
-  }) : super(key: key);
+    @required this.question,
+  })  : assert(question != null),
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {

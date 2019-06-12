@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'final_page.dart';
 import 'questions.dart';
+import 'quiz_page_widgets/completion_dots.dart';
+import 'quiz_page_widgets/custom_card.dart';
+import 'quiz_page_widgets/question_text.dart';
 
 class QuizPage extends StatefulWidget {
   @override
@@ -30,10 +34,25 @@ class QuizPageState extends State<QuizPage> {
             ],
           ),
         ),
-        // TODO Inserire testo della domanda
-        // TODO Inserire barra di completamento
-        // TODO Inserire bottoni delle risposte
-        child: Placeholder(),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            CompletionDots(
+              target: target,
+              counter: score,
+            ),
+            QuestionText(question: question.content),
+            Wrap(
+              children: List.generate(
+                question.answers.length,
+                (i) => CustomCard(
+                      answer: question.answers[i],
+                      checkCorrect: _checkCorrect,
+                    ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -61,6 +80,11 @@ class QuizPageState extends State<QuizPage> {
       assert(counter <= target);
       if (counter == target) {
         // TODO navigare alla pagina finale
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => FinalPage(),
+          ),
+        );
         print('END');
       } else if (counter < target) {
         Future.delayed(
