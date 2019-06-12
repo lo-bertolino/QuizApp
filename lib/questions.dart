@@ -15,7 +15,7 @@ class Question {
   ) : assert(answers?.length == 4);
 }
 
-List<Question> db = [
+List<Question> questionList = [
   Question(
     'Dove nacque Galileo Galilei?',
     [

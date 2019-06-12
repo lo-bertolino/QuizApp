@@ -42,7 +42,7 @@ class QuizPageState extends State<QuizPage> {
   void initState() {
     super.initState();
     print('There are ' +
-        db.length.toString() +
+        questionList.length.toString() +
         ' questions in total');
     _newQuestion();
   }
@@ -81,6 +81,6 @@ class QuizPageState extends State<QuizPage> {
         score.toString() +
         ', Target: ' +
         target.toString());
-    question = db[counter];
+    question = questionList[counter];
   }
 }
