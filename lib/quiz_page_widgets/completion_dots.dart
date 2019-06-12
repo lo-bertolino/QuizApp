@@ -14,19 +14,23 @@ class CompletionDots extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: List.generate(
-        target,
-        (i) => Padding(
-              child: Icon(
-                i < counter
-                    ? Icons.check_circle_outline
-                    : Icons.radio_button_unchecked,
-                color: Colors.white,
+    return Padding(
+      padding: const EdgeInsets.all(20.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: List.generate(
+          target,
+          (i) => Padding(
+                child: Icon(
+                  i < counter
+                      ? Icons.check_circle_outline
+                      : Icons.radio_button_unchecked,
+                  color: Colors.white,
+                ),
+                padding:
+                    EdgeInsets.symmetric(horizontal: 5),
               ),
-              padding: EdgeInsets.symmetric(horizontal: 5),
-            ),
+        ),
       ),
     );
   }

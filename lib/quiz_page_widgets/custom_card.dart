@@ -38,7 +38,7 @@ class CustomCardState extends State<CustomCard> {
             ),
           ),
           height: MediaQuery.of(context).size.height / 4,
-          width: MediaQuery.of(context).size.width / 2.6,
+          width: MediaQuery.of(context).size.width / 2.8,
         ),
       ),
     );

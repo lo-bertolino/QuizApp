@@ -6,11 +6,11 @@ class Answer {
 }
 
 class Question {
-  String string;
+  String content;
   List<Answer> answers = List(4);
 
   Question(
-    this.string,
+    this.content,
     this.answers,
   ) : assert(answers?.length == 4);
 }
